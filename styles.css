@@ -725,3 +725,86 @@ textarea.form-control {
 .navbar {
 	margin-left: auto;
 }
+/*------Menu-Toggle--------*/
+
+.menu-toggle {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40px;
+    height: 24px;
+    z-index: 999;
+    position: relative;
+    top: -9px;
+    margin-left: auto;
+    display: none;
+}
+
+.menu-toggle span {
+    width: 50px;
+    height: 5px;
+    background: #275B86;
+    margin: 4px auto;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
+.menu-toggle.on .bar1 {
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.menu-toggle.on .bar2 {
+    opacity: 0;
+}
+
+.menu-toggle.on .bar3 {
+    transform: rotate(-45deg) translate(13px, -12px);
+}
+/*------Menu-Toggle Media Queries--------*/
+    .menu-toggle {
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        width: 40px;
+        height: 24px;
+        z-index: 999;
+        position: relative;
+        top: -9px;
+        right: 10px;
+        margin-left: auto;
+    }
+    .menu-toggle span {
+        width: 50px;
+        height: 5px;
+        background: #275B86;
+        margin: 4px auto;
+        transition: all 0.3s;
+        backface-visibility: hidden;
+    }
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 103px;
+        right: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+    .navbar ul {
+        display: block;
+        background: #275B86;
+        padding: 13px;
+        width: 50%;
+        margin-left: auto;
+    }
+    .navbar ul li {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 5px;
+        padding-left: 0;
+    }
+    .navbar li a {
+        color: #fff;
+    }
